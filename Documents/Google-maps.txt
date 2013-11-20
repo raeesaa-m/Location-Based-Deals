@@ -1,7 +1,7 @@
 Link : 
 http://mobile.tutsplus.com/tutorials/android/android-sdk-working-with-google-maps-application-setup/
 
-1.Download and install Google Play Services in android sdk manager, if you haven't already.(Installed it during GPS)
+1.Download and install Google Play Services in android sdk manager, if you haven't already.
 
 2.Once Eclipse downloads and installs the Google Play services package, you can import it into your workspace. 
 Right Click project explorer > Import > Android > Existing Android Code into Workspace browse for E:\Softwares\Android\adt-bundle-windows-x86-20130219\sdk\extras\google\google_play_services\libproject\google-play-services_lib.
@@ -11,7 +11,6 @@ Use following command for obtaining debug certificate(SHA1 fingerprint)
 
 	keytool -list -v -keystore "%HOMEPATH%\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
 
-	%HOMEPATH% in my case C:\users\SQR01. After entering this command, you'll get all the certificate finger prints. You'll need SHA1. 
 
 4. Now sign in to your google account and navigate to https://code.google.com/apis/console/. If you haven’t used the console before it will prompt you to create a project. Create it.
 The project has default name 'API Project'. You can see it in left top corner. You can rename it by selecting it.
@@ -22,7 +21,7 @@ You should see a list of Google services, scroll down to Google Maps Android API
 6.Now we can get a key for the app. Select API Access on the left-hand-side of the API console. You may already see a key for browser apps but we need to create one for android maps.
 Click on 'Create New Android Key' button. Enter SHA1 fingerprint, semicolon and package name as follows-
 
-	14:BA:1B:03:E0:0E:DC:A7:DF:CC:31:C7:AA:2F:0A:75:C6:03:42:F2;your.package.name
+	SHA1-fingerprint;your.package.name
 
 7.Open the android manifest file and add the following inside application element :
 
